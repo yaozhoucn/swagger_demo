@@ -22,6 +22,9 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());
     }
     public ApiInfo apiInfo(){
+        /**
+         * 基本信息设置
+         */
         Contact contact = new Contact("yaozhou","127.0.0.1","3124723678@qq.com");
         return new ApiInfo(
                 "YaoShen Documentation",
