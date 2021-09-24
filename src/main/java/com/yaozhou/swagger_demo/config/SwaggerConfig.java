@@ -20,7 +20,8 @@ public class SwaggerConfig {
     @Bean
     public Docket docket(){
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());
-    }
+
+            }
     public ApiInfo apiInfo(){
         /**
          * 基本信息设置
@@ -37,5 +38,17 @@ public class SwaggerConfig {
                 new ArrayList<>()
 
         );
+    }
+    @Bean
+    public Docket docket1() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("group1");
+    }
+    @Bean
+    public Docket docket2() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("group2");
+    }
+    @Bean
+    public Docket docket3() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("group3");
     }
 }
